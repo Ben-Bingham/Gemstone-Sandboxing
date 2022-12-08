@@ -1,0 +1,4 @@
+[submodule "Dependencies/Gemstone"]
+	path = Dependencies/Gemstone
+	url = https://github.com/Ben-Bingham/Gemstone
+	branch = Build-System-Rework
