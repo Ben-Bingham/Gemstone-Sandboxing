@@ -7,6 +7,8 @@ project "Sandbox"
 	targetdir "%{wks.location}/build/bin/%{prj.name}"
 	objdir "%{wks.location}/build/bin-int/%{prj.name}"
 
+	flags "MultiProcessorCompile"
+
 	files {
 		-- Code
 		"src/**.h",
@@ -18,9 +20,14 @@ project "Sandbox"
 
 	includedirs {
 		"src",
-		"%{wks.location}/Gemstone/src"
+		-- "%{wks.location}/Celestite/src",
+		"../Lazuli/src",
+		"../Malachite/src",
+		"../Wavellite/src",
+		"../Ruby/src",
+		-- "%{wks.location}/Pyrite/src"
 	}
 
-	--include "../Dependencies/Gemstone"
+	links "Gemstone"
 
 	print "Sandbox Initialized"
